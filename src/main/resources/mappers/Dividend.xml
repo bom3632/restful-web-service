@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-<mapper namespace="com.example.dao.DividendDao">
-    <select id="getDividends" parameterType="DividendDto" resultType="com.example.dto.DividendDto">
+<mapper namespace="mapper.dividend">
+    <select id="getDividends" resultType="com.example.restfulwebservice.dto.DividendDto">
         SELECT ric, tkr, rec_dt, py_dt, dvd_r, DVD_CURR
         FROM TMTSKR843I00
         WHERE TKR = #{tkr}

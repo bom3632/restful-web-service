@@ -1,4 +1,4 @@
-package com.example.config;
+package com.example.restfulwebservice.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;

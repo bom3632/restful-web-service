@@ -1,4 +1,4 @@
-package com.example.config;
+package com.example.restfulwebservice.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -15,7 +15,6 @@ import javax.sql.DataSource;
 @MapperScan(basePackages="com.example.mapper")
 @EnableTransactionManagement
 public class MySQLConfig {
-
     //프로젝트의 어디에서나 쓸 수 있도록 bean에 등록
     @Bean
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {

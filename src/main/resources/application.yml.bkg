@@ -1,0 +1,13 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://springboot-db.cqy5hke5r5w3.ap-northeast-2.rds.amazonaws.com:3306/stockinfo?serverTimeZone=Asia/Seoul
+    username: admin
+    password: Cc270618!!
+  data:
+    jpa:
+      repositories:
+        enabled=false:

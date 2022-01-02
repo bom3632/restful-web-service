@@ -11,10 +11,10 @@ import java.util.List;
 
 @RestController
 public class DividendController {
-
+    // 배당 정보 가져오기
     @Autowired
     DividendService dividendService;
-
+    //파라미터 = 티커
     @GetMapping("/divide/{Tkr}")
     public List<DividendDto> query(@PathVariable(name = "Tkr") String Ticker) throws Exception{
         return dividendService.getDividends(Ticker);

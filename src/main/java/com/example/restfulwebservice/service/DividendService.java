@@ -7,13 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class DividendService {
+public interface DividendService {
 
-   @Autowired
-    private DividendDao dividendDao;
+    List<DividendDto> getDividends(String tkr) ;
 
-    public List<DividendDto> getDividends(String tkr) throws Exception {
-        return dividendDao.getDividends(tkr);
-    }
 }

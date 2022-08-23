@@ -20,13 +20,12 @@ import javax.sql.DataSource;
 @Configuration
 @EnableTransactionManagement
 @MapperScan(
-        basePackages="com.example.restfulwebservices"
+        basePackages="com.example.restful-webservices"
 )
 public class MySQLConfig {
-    //프로젝트의 어디에서나 쓸 수 있도록 bean에 등록
     @Bean(name="mysqlDataSource")
     @Primary
-    @ConfigurationProperties(prefix = "spring.db1.datasource")
+    @ConfigurationProperties(prefix = "spring.datasource.hikari")
     public DataSource dbDataSource()
     {
         return DataSourceBuilder.create().build();
@@ -49,7 +48,6 @@ public class MySQLConfig {
     }
 
     @Bean(name="mysqlSessionTemplate")
-    @ConfigurationProperties("spring.datasource.hikari")
     public HikariDataSource dataSource(DataSourceProperties properties) {
         return properties.initializeDataSourceBuilder().type(HikariDataSource.class).build();
     }

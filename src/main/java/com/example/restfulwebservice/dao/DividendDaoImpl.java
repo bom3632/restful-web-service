@@ -10,12 +10,15 @@ import java.util.List;
 @Repository("DividendDao")
 public class DividendDaoImpl implements DividendDao{
 
-    @Autowired
-    private SqlSession sqlSession;
+    private final SqlSession sqlSession;
+
+    public DividendDaoImpl(SqlSession sqlSession) {
+        this.sqlSession = sqlSession;
+    }
 
     @Override
     public List<DividendDto> getDividends(String tkr) {
-        System.out.println("#TKR:"+tkr);
+        System.out.println("INPUT #TKR:"+tkr);
         return sqlSession.selectList("mapper.dividend.getDividends", tkr);
     }
 }

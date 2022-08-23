@@ -20,7 +20,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableTransactionManagement
 @MapperScan(
-        basePackages="com.example.restful-webservices"
+        basePackages="com.example.restfulwebservices"
 )
 public class MySQLConfig {
     @Bean(name="mysqlDataSource")

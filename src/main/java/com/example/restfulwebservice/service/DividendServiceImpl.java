@@ -11,7 +11,7 @@ import java.util.List;
 public class DividendServiceImpl implements DividendService {
 
     @Autowired
-    private DividendDao dividendDao;
+    DividendDao dividendDao;
 
     @Override
     public List<DividendDto> getDividends(String tkr) {
